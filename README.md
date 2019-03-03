@@ -26,6 +26,27 @@ tests = TestUnit.suite "Bouzuya.TemplateString" do
 
 See: [`test/Bouzuya/TemplateString.purs`](test/Bouzuya/TemplateString.purs).
 
+## Note
+
+`packages.dhall`
+
+```dhall
+let additions = {=} //
+      { bouzuya-template-string =
+          mkPackage
+          [ "arrays"
+          , "either"
+          , "foreign-object"
+          , "maybe"
+          , "partial"
+          , "prelude"
+          , "strings"
+          ]
+          "https://github.com/bouzuya/purescript-bouzuya-template-string.git"
+          "v0.1.0"
+      }
+```
+
 ## How to build
 
 ```bash
