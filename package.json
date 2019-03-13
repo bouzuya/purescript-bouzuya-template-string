@@ -1,7 +1,7 @@
 {
   "name": "purescript-bouzuya-template-string",
   "description": "`Bouzuya.TemplateString` module",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": {
     "url": "https://bouzuya.net/",
     "name": "bouzuya",
