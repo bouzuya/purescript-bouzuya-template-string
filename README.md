@@ -20,8 +20,9 @@ tests = TestUnit.suite "Bouzuya.TemplateString" do
         Object.fromFoldable
           [ Tuple "foo" "FOO"
           , Tuple "bar" "BAR"
+          -- baz is nothing
           ]
-    Assert.equal "FOOBAR" (TemplateString.template "{{foo}}{{bar}}" obj1)
+    Assert.equal "FOOBAR" (TemplateString.template "{{foo}}{{bar}}{{baz}}" obj1)
 ```
 
 See: [`test/Bouzuya/TemplateString.purs`](test/Bouzuya/TemplateString.purs).
@@ -43,7 +44,7 @@ let additions = {=} //
           , "strings"
           ]
           "https://github.com/bouzuya/purescript-bouzuya-template-string.git"
-          "v0.1.0"
+          "v1.0.0"
       }
 ```
 
