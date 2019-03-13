@@ -19,10 +19,11 @@ tests = TestUnit.suite "Bouzuya.TemplateString" do
         Object.fromFoldable
           [ Tuple "foo" "FOO"
           , Tuple "bar" "BAR"
+          -- baz is nothing
           ]
     Assert.equal
       "FOOBAR"
-      (TemplateString.template "{{foo}}{{bar}}" obj1)
+      (TemplateString.template "{{foo}}{{bar}}{{baz}}" obj1)
     let
       obj2 =
         Object.fromFoldable

@@ -24,7 +24,7 @@ template :: String -> Object String -> String
 template tmpl obj =
   Regex.replace'
     pattern
-    (\s m -> Maybe.fromMaybe s do
+    (\s m -> Maybe.fromMaybe mempty do
       key <- Array.index m 0
       Object.lookup key obj)
     tmpl
